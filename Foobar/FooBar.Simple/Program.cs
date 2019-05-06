@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FooBar.FooBarSimple
+namespace FooBar.Simple
 {
     static class Program
     {
