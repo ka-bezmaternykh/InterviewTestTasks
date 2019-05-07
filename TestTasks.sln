@@ -3,9 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FooBar", "FooBar", "{88734663-39C3-49E4-BCE4-D917AE3552D1}"
+	ProjectSection(SolutionItems) = preProject
+		FooBar\README.md = FooBar\README.md
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.Simple", "FooBar\FooBar.Simple\FooBar.Simple.csproj", "{588812B4-D930-4AA8-9706-CCA9453FB0BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FooBar", "FooBar", "{88734663-39C3-49E4-BCE4-D917AE3552D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.MoreReal.Cli", "FooBar\FooBar.MoreReal.Cli\FooBar.MoreReal.Cli.csproj", "{40834C76-4DB9-4B56-9C1D-04E0CC6FCC7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.MoreReal.Tests", "FooBar\FooBar.MoreReal.Tests\FooBar.MoreReal.Tests.csproj", "{39E21A23-8E27-44DD-97D6-92555ACFA136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.MoreReal", "FooBar\FooBar.MoreReal\FooBar.MoreReal.csproj", "{ED210AF2-8469-4ABF-BAD9-5416710A638E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +26,27 @@ Global
 		{588812B4-D930-4AA8-9706-CCA9453FB0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{588812B4-D930-4AA8-9706-CCA9453FB0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{588812B4-D930-4AA8-9706-CCA9453FB0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40834C76-4DB9-4B56-9C1D-04E0CC6FCC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40834C76-4DB9-4B56-9C1D-04E0CC6FCC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40834C76-4DB9-4B56-9C1D-04E0CC6FCC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40834C76-4DB9-4B56-9C1D-04E0CC6FCC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E21A23-8E27-44DD-97D6-92555ACFA136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E21A23-8E27-44DD-97D6-92555ACFA136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E21A23-8E27-44DD-97D6-92555ACFA136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E21A23-8E27-44DD-97D6-92555ACFA136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{588812B4-D930-4AA8-9706-CCA9453FB0BF} = {88734663-39C3-49E4-BCE4-D917AE3552D1}
+		{40834C76-4DB9-4B56-9C1D-04E0CC6FCC7D} = {88734663-39C3-49E4-BCE4-D917AE3552D1}
+		{39E21A23-8E27-44DD-97D6-92555ACFA136} = {88734663-39C3-49E4-BCE4-D917AE3552D1}
+		{ED210AF2-8469-4ABF-BAD9-5416710A638E} = {88734663-39C3-49E4-BCE4-D917AE3552D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2FC103B-1C7A-4831-8411-3C9989A63394}
