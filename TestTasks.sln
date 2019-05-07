@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.MoreReal.Tests", "Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.MoreReal", "FooBar\FooBar.MoreReal\FooBar.MoreReal.csproj", "{ED210AF2-8469-4ABF-BAD9-5416710A638E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayOfUniqueIntegers", "ArrayOfUniqueIntegers\ArrayOfUniqueIntegers.csproj", "{2E1F759E-D3CB-40A9-8F3D-84F9F6FD9B36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED210AF2-8469-4ABF-BAD9-5416710A638E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1F759E-D3CB-40A9-8F3D-84F9F6FD9B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1F759E-D3CB-40A9-8F3D-84F9F6FD9B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1F759E-D3CB-40A9-8F3D-84F9F6FD9B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1F759E-D3CB-40A9-8F3D-84F9F6FD9B36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
