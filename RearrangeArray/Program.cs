@@ -11,12 +11,8 @@ namespace RearrangeArray
         static void Main(string[] args)
         {
             var rainbow = new string[] { "red", "orange", "yellow", "green", "blue", "indigo", "purple" };
-            var rearrangedRainbow = RearrangeArray1(rainbow, "green");
 
-            // Algorithm two has bug and not working.
-            //RearrangeArray2(rainbow, "green");
-
-            var rearrangedRainbow2 = RearrangeArray3(rainbow, "green");
+            RearrangeArrayByShuffle(rainbow, "green");
         }
 
         #region Algorithm One
@@ -24,7 +20,7 @@ namespace RearrangeArray
         // should work quickly, but at the expense of memory consumption
         // does not change the existing array
         // difficult to maintain
-        private static string[] RearrangeArray1(string[] array, string newBegining)
+        public static string[] RearrangeArrayWithСreatingNew(string[] array, string newBegining)
         {
             var indexOf = 0;
             for (int i = 0; i < array.Length; i++)
@@ -68,8 +64,7 @@ namespace RearrangeArray
         // Cons:
         // Difficult to undestand and maintain
         // On very large arrays, a StackOverflowException is possible due to recursion
-        // Not working because has bug =(
-        private static void RearrangeArray2(string[] array, string newBegining)
+        public static void RearrangeArrayByShuffle(string[] array, string newBegining)
         {
             var indexOf = 0;
             for (int i = 0; i < array.Length; i++)
@@ -87,14 +82,13 @@ namespace RearrangeArray
                 return;
             }
 
-            RearrangePartly(array, 0, indexOf, array.Length);
+            var headLength = indexOf;
+            var tailLength = array.Length - headLength;
+            RearrangeSubArray(array, 0, headLength, tailLength);
         }
 
-        private static void RearrangePartly(string[] array, int startIndex, int headLength, int endIndex)
+        private static void RearrangeSubArray(string[] array, int startIndex, int headLength, int tailLength)
         {
-            var subarrayLength = endIndex - startIndex;
-            var tailLength = subarrayLength - headLength;
-
             if (headLength == tailLength)
             {
                 // simple case, two same in length part, just swap
@@ -102,14 +96,23 @@ namespace RearrangeArray
             }
             else if (headLength < tailLength)
             {
+                // more difficult case, swap partly, by less part
                 SwapSameInLength(array, startIndex, headLength);
-                RearrangePartly(array, headLength, headLength, endIndex);
+
+                // then rearrange new sub array
+                var newStartIndex = startIndex + headLength;
+                var newTailLength = tailLength - headLength;
+                RearrangeSubArray(array, newStartIndex, headLength, newTailLength);
             }
             else
             {
-                var newStartIndex = startIndex + headLength - tailLength - 1;
-                SwapSameInLength(array, newStartIndex, endIndex - newStartIndex);
-                RearrangePartly(array, startIndex, headLength - tailLength, newStartIndex);
+                // more difficult case, swap partly, by less part
+                var swapStartIndex = startIndex + headLength - tailLength;
+                SwapSameInLength(array, swapStartIndex, tailLength);
+
+                // then rearrange new sub array
+                var newHeadLegth = headLength - tailLength;
+                RearrangeSubArray(array, startIndex, newHeadLegth, tailLength);
             }
         }
 
@@ -130,7 +133,7 @@ namespace RearrangeArray
         // spelled quickly
         // suitable for small collections
         // does not change the existing array
-        private static string[] RearrangeArray3(string[] array, string newBegining)
+        public static string[] RearrangeArrayUsingLinq(string[] array, string newBegining)
         {
             var indexOf = array.ToList().IndexOf(newBegining);
             if (indexOf < 1)
